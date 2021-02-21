@@ -49,6 +49,8 @@ namespace Valve.VR.InteractionSystem
         protected Quaternion attachRotation;
         protected Transform attachEaseInTransform;
 
+        public AudioSource sound;
+
 		public UnityEvent onPickUp;
         public UnityEvent onDetachFromHand;
         public HandEvent onHeldUpdate;
@@ -154,6 +156,7 @@ namespace Valve.VR.InteractionSystem
 			attachTime = Time.time;
 			attachPosition = transform.position;
 			attachRotation = transform.rotation;
+            sound.Play();
 
 		}
 
