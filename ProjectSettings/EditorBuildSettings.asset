@@ -15,6 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/LivingRoom.unity
     guid: 065f8bf73fece7343ab6a9b770482b02
   m_configObjects:
+    Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 03232dd32dbe43d49b0cf443ebe37313,
+      type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 2517c896e1dac2f42b6e47700f63b725,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f66d5da06f7d01340ab0c9fb514398d3,
