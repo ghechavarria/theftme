@@ -8,6 +8,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+
+
 namespace Valve.VR.InteractionSystem.Sample
 {
 	//-------------------------------------------------------------------------
@@ -24,7 +26,9 @@ namespace Valve.VR.InteractionSystem.Sample
 		private Hand.AttachmentFlags attachmentFlags = Hand.defaultAttachmentFlags & ( ~Hand.AttachmentFlags.SnapOnAttach ) & (~Hand.AttachmentFlags.DetachOthers) & (~Hand.AttachmentFlags.VelocityMovement);
 
         private Interactable interactable;
-
+		
+		public AudioSource sound;
+		
 		//-------------------------------------------------
 		void Awake()
 		{
@@ -36,6 +40,7 @@ namespace Valve.VR.InteractionSystem.Sample
             //hoveringText.text = "Hovering: False";
 
             interactable = this.GetComponent<Interactable>();
+			
 		}
 
 
@@ -74,7 +79,7 @@ namespace Valve.VR.InteractionSystem.Sample
                 // Call this to continue receiving HandHoverUpdate messages,
                 // and prevent the hand from hovering over anything else
                 hand.HoverLock(interactable);
-
+				
 
                 // Attach this object to the hand
                 hand.AttachObject(gameObject, startingGrabType, attachmentFlags);
@@ -83,7 +88,8 @@ namespace Valve.VR.InteractionSystem.Sample
 
             }
             else if (isGrabEnding)
-            {
+            {	
+				
                 // Detach this object from the hand
                 hand.DetachObject(gameObject);
 
@@ -100,6 +106,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		//-------------------------------------------------
 		private void OnAttachedToHand( Hand hand )
         {
+			sound.Play();
             //generalText.text = string.Format("Attached: {0}", hand.name);
             //attachTime = Time.time;
 		}
