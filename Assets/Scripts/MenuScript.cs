@@ -5,6 +5,7 @@
 //=============================================================================
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 namespace Valve.VR.InteractionSystem.Sample
@@ -74,8 +75,12 @@ namespace Valve.VR.InteractionSystem.Sample
                 // and prevent the hand from hovering over anything else
                 hand.HoverLock(interactable);
 
+
                 // Attach this object to the hand
                 hand.AttachObject(gameObject, startingGrabType, attachmentFlags);
+				
+
+
             }
             else if (isGrabEnding)
             {
@@ -107,6 +112,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		private void OnDetachedFromHand( Hand hand )
 		{
            // generalText.text = string.Format("Detached: {0}", hand.name);
+		   SceneManager.LoadScene(1);
 		}
 
 
