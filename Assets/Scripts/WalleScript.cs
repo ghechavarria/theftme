@@ -26,6 +26,8 @@ namespace Valve.VR.InteractionSystem.Sample
 
         private Interactable interactable;
 
+		public AudioSource sound;
+
 		//-------------------------------------------------
 		void Awake()
 		{
@@ -103,6 +105,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		//-------------------------------------------------
 		private void OnAttachedToHand( Hand hand )
         {
+			sound.Play();
             //generalText.text = string.Format("Attached: {0}", hand.name);
             //attachTime = Time.time;
 		}
