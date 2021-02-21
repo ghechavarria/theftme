@@ -110,22 +110,21 @@ public class DisplayDialogue : MonoBehaviour
         string text
     ) {
 
-WriteLine("we are straritng!!!!");
         activeSpeaker.Dialogue = text;
 
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(activeSpeaker, text));
+        /*StopAllCoroutines();
+        StartCoroutine(TypeSentence(activeSpeaker, text));*/
 
         activeSpeaker.Show();
         inactiveSpeaker.Hide();
     }
 
-    IEnumerator TypeSentence(SpeakerUI speaker, string sentence) {
+    /*IEnumerator TypeSentence(SpeakerUI speaker, string sentence) {
         speaker.dialogue.text = "";
         foreach (char letter in sentence.ToCharArray())
         {
             speaker.dialogue.text += letter;
             yield return new WaitForSeconds(0.05f);
         }
-    }
+    }*/
 }
