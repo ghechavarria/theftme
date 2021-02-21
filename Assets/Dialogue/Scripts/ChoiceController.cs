@@ -13,7 +13,7 @@ public class ChoiceController : MonoBehaviour {
     public TextMeshProUGUI TMP_text;
 
     public static ChoiceController AddChoiceOption(Button template, Choice choice, int idx) {
-        int spacing = 25;
+        int spacing = 50;
         Button button = Instantiate(template);
 
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using static System.Console;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -109,6 +110,7 @@ public class DisplayDialogue : MonoBehaviour
         string text
     ) {
 
+WriteLine("we are straritng!!!!");
         activeSpeaker.Dialogue = text;
 
         StopAllCoroutines();
