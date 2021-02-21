@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/LivingRoom.unity
+    guid: 065f8bf73fece7343ab6a9b770482b02
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 2517c896e1dac2f42b6e47700f63b725,
       type: 2}
